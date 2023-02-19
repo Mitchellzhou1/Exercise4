@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     int score = 0;
     int life = 3;
-    public TextMeshProUGUI scoreUI;
-    public TextMeshProUGUI lifeUI;
+    public TMPro.TextMeshProUGUI scoreUI;
+    public TMPro.TextMeshProUGUI lifeUI;
     private void Awake()
     {
         if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
