@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - enemy
+  - NPCBullet
+  - PlayerBullet
+  - Boundary
+  - Banana
+  - Health
   layers:
   - Default
   - TransparentFX

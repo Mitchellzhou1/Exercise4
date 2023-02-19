@@ -19,10 +19,16 @@ public class Spawn : MonoBehaviour
     void SpawnEnemy()
     {
         int Start_Posistion_X = 9;
-        float Start_Posistion_Y = Random.Range(-4.9f, 4.9f);
+        float Start_Posistion_Y = Random.Range(-4.5f, 4.5f);
 
         GameObject gorilla = Instantiate(enemies[(int)Random.Range(0, enemies.Length)], new Vector3(Start_Posistion_X, Start_Posistion_Y, 0), Quaternion.identity);
         gorilla.GetComponent<Rigidbody2D>().AddForce(new Vector2(-speed, 0));
     
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if (other.CompareTag("NPCBullet") || other.CompareTag("PlayerBullet")){
+            Destroy(other.gameObject);
+        }
     }
 }
