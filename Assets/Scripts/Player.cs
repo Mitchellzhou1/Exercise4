@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     int speed = 20;
     public AudioClip shootSnd;
     public AudioClip hitSnd;
-    public GameObject bulletPrefab;
+    public AudioClip bananaSnd;
     public GameObject explosion;
     Rigidbody2D _rigidbody2D;
     AudioSource _audioSource;
@@ -51,6 +51,12 @@ public class Player : MonoBehaviour
             Instantiate(explosion, transform.position, Quaternion.identity);
             _audioSource.PlayOneShot(hitSnd);
             _gameManager.MinusLife();
+        }
+
+        if (other.CompareTag("Banana"))
+        {
+            _audioSource.PlayOneShot(bananaSnd);
+            _gameManager.AddScore();
         }
     }
 } 

@@ -28,9 +28,9 @@ public class GameManager : MonoBehaviour
         lifeUI.text = " " + life;
     }
 
-    public void AddScore(int points)
+    public void AddScore()
     {
-        score += points;
+        score += 1;
         scoreUI.text = " " + score;
     }
 
