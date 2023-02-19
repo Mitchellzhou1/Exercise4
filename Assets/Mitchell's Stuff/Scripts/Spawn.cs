@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Spawn : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public float rate;
+    public int speed;
+    public GameObject[] enemies;
+
+    void Start()
+    {
+        InvokeRepeating("SpawnEnemy", rate, rate);
+    }
+
+    // Update is called once per frame
+    void SpawnEnemy()
+    {
+        int Start_Posistion_X = 9;
+        float Start_Posistion_Y = Random.Range(-4.9f, 4.9f);
+
+        GameObject gorilla = Instantiate(enemies[(int)Random.Range(0, enemies.Length)], new Vector3(Start_Posistion_X, Start_Posistion_Y, 0), Quaternion.identity);
+        gorilla.GetComponent<Rigidbody2D>().AddForce(new Vector2(-speed, 0));
+    
+    }
+}
