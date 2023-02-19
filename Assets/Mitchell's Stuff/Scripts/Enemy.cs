@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
 
 
     public GameObject explosion;
+    public GameObject banana;
     public GameObject bulletPrefab;
     public Transform spawnPoint;
 
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
             if (health <= 0){
                 Instantiate(explosion, transform.position, Quaternion.identity);
                 Destroy(gameObject);
+                Instantiate(banana, transform.position, Quaternion.identity);
             }
         }
 
