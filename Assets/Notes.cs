@@ -4,7 +4,7 @@
 //     3. space
 
 // player:
-//     Astronaut Monkey
+//     Astronaut Monkxey
 //         - water gun -> water droplet
 //         - (special move) laser gun
 //         - biting fish
