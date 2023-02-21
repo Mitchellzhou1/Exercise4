@@ -1,0 +1,47 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Enemy2 : MonoBehaviour
+{
+    int speed = 100;
+    int health = 3;
+    int bulletSpeed = 300;
+    public GameObject explosion;
+    public GameObject banana;
+    public GameObject bulletPrefab;
+    public Transform spawnPoint;
+    Rigidbody2D _rigidbody2D;
+
+    void Start()
+    {
+        Destroy(gameObject, 30);
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _rigidbody2D.AddForce(new Vector2(0, -speed));
+
+        InvokeRepeating("Shoot", 5, 5);
+
+    }
+
+    void Shoot(){
+        GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
+        newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -bulletSpeed));
+        Destroy(newBullet, 5);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bullet"))
+        {
+            Destroy(other.gameObject);
+            health -= 1;
+            if (health <= 0)
+            {
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            Instantiate(banana, transform.position, Quaternion.identity);
+            }
+        }
+    }
+
+}

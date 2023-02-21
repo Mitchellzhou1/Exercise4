@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player2 : MonoBehaviour
 {
-    int speed = 20;
+    int speed = 10;
     public AudioClip shootSnd;
     public AudioClip hitSnd;
     public AudioClip bananaSnd;
+    public AudioClip powerUpSnd;
     public GameObject explosion;
+    public GameObject bulletPrefab;
+    public Transform spawnPointL;
+    public Transform spawnPointR;
     Rigidbody2D _rigidbody2D;
     AudioSource _audioSource;
     GameManager _gameManager;
@@ -58,5 +62,38 @@ public class Player : MonoBehaviour
             _audioSource.PlayOneShot(bananaSnd);
             _gameManager.AddScore();
         }
+
+        if (other.CompareTag("Health"))
+        {
+            _audioSource.PlayOneShot(powerUpSnd);
+            _gameManager.AddLife();
+        }
+
+        if (other.CompareTag("Bomb"))
+        {
+            _audioSource.PlayOneShot(powerUpSnd);
+            InvokeRepeating("Shoot", 0, 0.1f);
+            StartCoroutine("StopShoot");
+            
+        }
+    }
+
+    void Shoot()
+    {
+
+        _audioSource.PlayOneShot(shootSnd);
+        GameObject rBullet = Instantiate(bulletPrefab, spawnPointR.position, Quaternion.identity);
+        rBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5));
+
+        GameObject lBullet = Instantiate(bulletPrefab, spawnPointL.position, Quaternion.identity);
+        lBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5));
+        Destroy(rBullet, 5);
+        Destroy(lBullet, 5);
+    }
+
+    IEnumerator StopShoot(){
+        yield return new WaitForSeconds(2);
+        CancelInvoke();
+
     }
 } 

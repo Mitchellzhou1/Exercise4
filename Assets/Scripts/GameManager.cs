@@ -24,14 +24,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        scoreUI.text = " " + score;
-        lifeUI.text = " " + life;
+        scoreUI.text = "SCORE: " + score;
+        lifeUI.text = "LIFE: " + life;
     }
 
     public void AddScore()
     {
         score += 1;
-        scoreUI.text = " " + score;
+        scoreUI.text = "SCORE: " + score;
     }
 
     public void MinusLife()
@@ -39,7 +39,16 @@ public class GameManager : MonoBehaviour
         if (life > 0)
         {
             life -= 1;
-            lifeUI.text = " " + life;
+            lifeUI.text = "LIFE: " + life;
+        }
+    }
+
+    public void AddLife()
+    {
+        if (life > 0)
+        {
+            life += 1;
+            lifeUI.text = "LIFE: " + life;
         }
     }
 
@@ -55,7 +64,7 @@ public class GameManager : MonoBehaviour
     if (life == 0)
         {
             Destroy(gameObject); 
-            SceneManager.LoadScene("levelName");
+            SceneManager.LoadScene("StartGame");
         }
 
     }

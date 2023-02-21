@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Banana : MonoBehaviour
+public class Bomb : MonoBehaviour
 {
     int speed;
 
@@ -26,7 +26,6 @@ public class Banana : MonoBehaviour
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            _gameManager.AddScore();
         }
     }
 }
