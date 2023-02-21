@@ -94,6 +94,5 @@ public class Player2 : MonoBehaviour
     IEnumerator StopShoot(){
         yield return new WaitForSeconds(2);
         CancelInvoke();
-
     }
 } 
