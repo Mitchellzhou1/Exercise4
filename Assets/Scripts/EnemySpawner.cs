@@ -22,6 +22,7 @@ public class EnemySpawner : MonoBehaviour
 
         GameObject gorilla = Instantiate(enemies[(int)Random.Range(0, enemies.Length)], new Vector3(Start_Posistion_X, Start_Posistion_Y, 0), Quaternion.identity);
         gorilla.GetComponent<Rigidbody2D>().AddForce(new Vector2(-speed, 0));
+        Destroy(gameObject, 8);
     
     }
 
