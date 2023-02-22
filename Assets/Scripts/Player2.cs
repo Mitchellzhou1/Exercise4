@@ -83,10 +83,10 @@ public class Player2 : MonoBehaviour
 
         _audioSource.PlayOneShot(shootSnd);
         GameObject rBullet = Instantiate(bulletPrefab, spawnPointR.position, Quaternion.identity);
-        rBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5));
+        rBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(5, 0));
 
         GameObject lBullet = Instantiate(bulletPrefab, spawnPointL.position, Quaternion.identity);
-        lBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5));
+        lBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(5, 0));
         Destroy(rBullet, 5);
         Destroy(lBullet, 5);
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy2 : MonoBehaviour
 {
-    int speed = 100;
+    int speed = 200;
     int health = 3;
     int bulletSpeed = 300;
     public AudioClip hitSnd;
