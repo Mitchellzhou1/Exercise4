@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {    
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 5);
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _rigidbody2D.velocity = transform.right * speed;
     }

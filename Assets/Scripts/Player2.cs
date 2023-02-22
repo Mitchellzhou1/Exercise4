@@ -87,8 +87,8 @@ public class Player2 : MonoBehaviour
 
         GameObject lBullet = Instantiate(bulletPrefab, spawnPointL.position, Quaternion.identity);
         lBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(5, 0));
-        Destroy(rBullet, 5);
-        Destroy(lBullet, 5);
+        Destroy(rBullet, 8);
+        Destroy(lBullet, 8);
     }
 
     IEnumerator StopShoot(){
