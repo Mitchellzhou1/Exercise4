@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-        DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
     }
 
@@ -52,6 +52,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public int getScore(){
+        return score;
+    }
+
     void Update()
     {
 #if !UNITY_WEBGL
@@ -64,8 +68,13 @@ public class GameManager : MonoBehaviour
     if (life == 0)
         {
             Destroy(gameObject); 
-            SceneManager.LoadScene("StartGame");
+            StartCoroutine(swapToEnd(3));
         }
+    }
 
+    IEnumerator swapToEnd (int seconds) {
+        int counter = seconds;
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("Death Screen");
     }
 }

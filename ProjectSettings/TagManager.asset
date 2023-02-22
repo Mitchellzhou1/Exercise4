@@ -12,6 +12,7 @@ TagManager:
   - NPCBullet
   - Health
   - Bomb
+  - NPCBoss
   layers:
   - Default
   - TransparentFX

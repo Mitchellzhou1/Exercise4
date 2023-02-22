@@ -9,10 +9,14 @@ public class Spawn : MonoBehaviour
     public float rate;
     public int speed;
     public GameObject[] enemies;
+    public GameObject Boss;
+
+    GameManager _gameManager;
 
     void Start()
     {
         InvokeRepeating("SpawnEnemy", rate, rate);
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -20,10 +24,23 @@ public class Spawn : MonoBehaviour
     {
         int Start_Posistion_X = 9;
         float Start_Posistion_Y = Random.Range(-4.5f, 4.5f);
+        bool activeBoss = false;
+        int count = 0;
 
-        GameObject gorilla = Instantiate(enemies[(int)Random.Range(0, enemies.Length)], new Vector3(Start_Posistion_X, Start_Posistion_Y, 0), Quaternion.identity);
-        gorilla.GetComponent<Rigidbody2D>().AddForce(new Vector2(-speed, 0));
-    
+        // if (enemies[0].CompareTag("NPCBoss") && score)
+        if (_gameManager.getScore() >= 3){
+            activeBoss = true;    
+        }
+
+        if (activeBoss && count == 0){
+            GameObject NPCBoss = Instantiate(Boss, new Vector3(-10, 0, 0), Quaternion.identity);
+            count += 1;
+        }
+        else if (!activeBoss){
+            print("This ran");
+            GameObject gorilla = Instantiate(enemies[(int)Random.Range(0, enemies.Length)], new Vector3(Start_Posistion_X, Start_Posistion_Y, 0), Quaternion.identity);
+            gorilla.GetComponent<Rigidbody2D>().AddForce(new Vector2(-speed, 0));    
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other){

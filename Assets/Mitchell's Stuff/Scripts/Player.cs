@@ -13,16 +13,14 @@ public class Player : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform spawnPoint;
 
+    GameManager _gameManager;
+
     Rigidbody2D _rigidbody2D;
     // Start is called before the first frame update
-
-    private void Awake(){
-        instance = this;
-    }
-
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -42,7 +40,7 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("NPCBullet")){
             Destroy(other.gameObject);
-            //ScoreManager.instance.loseHealth(1);
+            _gameManager.MinusLife();
         }
         else if (other.CompareTag("Banana")){
             Destroy(other.gameObject);
@@ -50,7 +48,7 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("Health")){
             Destroy(other.gameObject);
-            // Add Health;
+            _gameManager.AddLife();
         }
     }
 
