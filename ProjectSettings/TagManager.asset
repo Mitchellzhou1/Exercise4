@@ -10,6 +10,8 @@ TagManager:
   - Boundary
   - Banana
   - Health
+  - Enemy1
+  - Water
   layers:
   - Default
   - TransparentFX
