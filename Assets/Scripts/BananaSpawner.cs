@@ -8,7 +8,7 @@ public class BananaSpawner : MonoBehaviour
     IEnumerator Start()
     {
         for (int i = 0; i < 5; i++)
-        {   Vector2 spawnPos = new Vector2(Random.Range(-9, 9), Random.Range(10, 20));
+        {   Vector2 spawnPos = new Vector2(12, Random.Range(-4.5f, 4.5f));
             Instantiate(banana, spawnPos, Quaternion.identity);
             yield return new WaitForSeconds(10);
         }

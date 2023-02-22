@@ -22,13 +22,13 @@ public class Enemy2 : MonoBehaviour
         _rigidbody2D.AddForce(new Vector2(0, -speed));
         _audioSource = GetComponent<AudioSource>();
 
-        InvokeRepeating("Shoot", 5, 5);
+        InvokeRepeating("Shoot", 2, 3);
 
     }
 
     void Shoot(){
         GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
-        newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -bulletSpeed));
+        newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(-bulletSpeed, 0));
         Destroy(newBullet, 5);
     }
 
