@@ -8,10 +8,15 @@ public class GameManager : MonoBehaviour
 {
     int score = 0;
     int life = 3;
+    string levelName;
+
     public TMPro.TextMeshProUGUI scoreUI;
     public TMPro.TextMeshProUGUI lifeUI;
     private void Awake()
-    {
+    {   
+        Scene scene = SceneManager.GetActiveScene();
+        levelName = scene.name;
+
         if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
         {
             Destroy(gameObject);
@@ -67,5 +72,21 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("StartGame");
         }
 
+    if (levelName == "Level 1")
+        {
+        if (score >= 10)
+        {
+            Destroy(gameObject); 
+            SceneManager.LoadScene("Level 2");
+        }
+        }
+    if (levelName == "Level 2")
+        {
+        if (score >= 20)
+        {
+            Destroy(gameObject); 
+            SceneManager.LoadScene("Level 3");
+        }
+        }
     }
 }
