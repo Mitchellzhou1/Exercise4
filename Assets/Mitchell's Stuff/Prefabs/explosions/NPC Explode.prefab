@@ -1,10 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<<< HEAD:Assets/Mitchell's Stuff/Prefabs/NPC Boss Explode.prefab
---- !u!1 &4376266021113068034
-========
---- !u!1 &8943407549544230641
->>>>>>>> origin/xiaoling:Assets/Mitchell's Stuff/Prefabs/explosions/NPC Explosion.prefab
+--- !u!1 &3664956007577802533
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,67 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<<< HEAD:Assets/Mitchell's Stuff/Prefabs/NPC Boss Explode.prefab
-  - component: {fileID: 8668326600064131430}
-  - component: {fileID: 5893439597682825799}
-  - component: {fileID: 5037021115165884047}
+  - component: {fileID: 5766134078444687675}
+  - component: {fileID: 3900921210848645170}
+  - component: {fileID: 2807626819474644443}
+  - component: {fileID: 4218915542062549169}
+  - component: {fileID: 792861375230328871}
   m_Layer: 0
-  m_Name: NPC Boss Explode
-========
-  - component: {fileID: 1308900613148796175}
-  - component: {fileID: 3126497024489695489}
-  - component: {fileID: 6619842212983103234}
-  - component: {fileID: 7382908255230873343}
-  m_Layer: 0
-  m_Name: NPC Explosion
->>>>>>>> origin/xiaoling:Assets/Mitchell's Stuff/Prefabs/explosions/NPC Explosion.prefab
+  m_Name: NPC Explode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<<< HEAD:Assets/Mitchell's Stuff/Prefabs/NPC Boss Explode.prefab
---- !u!4 &8668326600064131430
-========
---- !u!4 &1308900613148796175
->>>>>>>> origin/xiaoling:Assets/Mitchell's Stuff/Prefabs/explosions/NPC Explosion.prefab
+--- !u!4 &5766134078444687675
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:Assets/Mitchell's Stuff/Prefabs/NPC Boss Explode.prefab
-  m_GameObject: {fileID: 4376266021113068034}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.32, y: 0, z: 0}
-========
-  m_GameObject: {fileID: 8943407549544230641}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.1, y: 0, z: 0}
->>>>>>>> origin/xiaoling:Assets/Mitchell's Stuff/Prefabs/explosions/NPC Explosion.prefab
+  m_GameObject: {fileID: 3664956007577802533}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.360001, y: -1.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<<< HEAD:Assets/Mitchell's Stuff/Prefabs/NPC Boss Explode.prefab
---- !u!198 &5893439597682825799
-========
---- !u!198 &3126497024489695489
->>>>>>>> origin/xiaoling:Assets/Mitchell's Stuff/Prefabs/explosions/NPC Explosion.prefab
+--- !u!198 &3900921210848645170
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:Assets/Mitchell's Stuff/Prefabs/NPC Boss Explode.prefab
-  m_GameObject: {fileID: 4376266021113068034}
-========
-  m_GameObject: {fileID: 8943407549544230641}
->>>>>>>> origin/xiaoling:Assets/Mitchell's Stuff/Prefabs/explosions/NPC Explosion.prefab
+  m_GameObject: {fileID: 3664956007577802533}
   serializedVersion: 8
-  lengthInSec: 0.05
+  lengthInSec: 5
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -147,7 +118,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -200,11 +171,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-<<<<<<<< HEAD:Assets/Mitchell's Stuff/Prefabs/NPC Boss Explode.prefab
-      scalar: 5
-========
-      scalar: 1.5
->>>>>>>> origin/xiaoling:Assets/Mitchell's Stuff/Prefabs/explosions/NPC Explosion.prefab
+      scalar: 4
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -696,8 +663,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
-    angle: 25
+    type: 0
+    angle: 0
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -1012,7 +979,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 50
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1085,7 +1052,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.29725224
+          time: 1
           value: 0
           inSlope: 1
           outSlope: 1
@@ -1398,28 +1365,18 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0, b: 0, a: 1}
-<<<<<<<< HEAD:Assets/Mitchell's Stuff/Prefabs/NPC Boss Explode.prefab
-        key1: {r: 0.9529412, g: 0.82077646, b: 0, a: 1}
-        key2: {r: 1, g: 1, b: 1, a: 0}
+        key0: {r: 0.9716981, g: 0, b: 0, a: 1}
+        key1: {r: 0.8796787, g: 0.9811321, b: 0, a: 1}
+        key2: {r: 0.9433962, g: 0.9298406, b: 0, a: 0}
         key3: {r: 1, g: 1, b: 1, a: 0}
-========
-        key1: {r: 0.9995657, g: 1, b: 0, a: 1}
-        key2: {r: 1, g: 1, b: 1, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 0}
->>>>>>>> origin/xiaoling:Assets/Mitchell's Stuff/Prefabs/explosions/NPC Explosion.prefab
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-<<<<<<<< HEAD:Assets/Mitchell's Stuff/Prefabs/NPC Boss Explode.prefab
-        ctime1: 35081
-========
-        ctime1: 43947
->>>>>>>> origin/xiaoling:Assets/Mitchell's Stuff/Prefabs/explosions/NPC Explosion.prefab
+        ctime1: 42791
         ctime2: 65535
-        ctime3: 0
+        ctime3: 65535
         ctime4: 0
         ctime5: 0
         ctime6: 0
@@ -1433,7 +1390,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 3
+        m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
@@ -4843,22 +4800,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
-<<<<<<<< HEAD:Assets/Mitchell's Stuff/Prefabs/NPC Boss Explode.prefab
---- !u!199 &5037021115165884047
-========
---- !u!199 &6619842212983103234
->>>>>>>> origin/xiaoling:Assets/Mitchell's Stuff/Prefabs/explosions/NPC Explosion.prefab
+--- !u!199 &2807626819474644443
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:Assets/Mitchell's Stuff/Prefabs/NPC Boss Explode.prefab
-  m_GameObject: {fileID: 4376266021113068034}
-========
-  m_GameObject: {fileID: 8943407549544230641}
->>>>>>>> origin/xiaoling:Assets/Mitchell's Stuff/Prefabs/explosions/NPC Explosion.prefab
+  m_GameObject: {fileID: 3664956007577802533}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -4872,7 +4821,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4923,19 +4872,112 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
-<<<<<<<< HEAD:Assets/Mitchell's Stuff/Prefabs/NPC Boss Explode.prefab
-========
---- !u!114 &7382908255230873343
+--- !u!114 &4218915542062549169
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8943407549544230641}
+  m_GameObject: {fileID: 3664956007577802533}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97a1a3a03b4ce0540b7078648c82181f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 2
->>>>>>>> origin/xiaoling:Assets/Mitchell's Stuff/Prefabs/explosions/NPC Explosion.prefab
+--- !u!82 &792861375230328871
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664956007577802533}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 30a8203ce1a34c54da8cb59a53adb1db, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

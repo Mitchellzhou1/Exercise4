@@ -57,6 +57,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+// Stuff Mitchell Added
+    public int getScore(){
+        return score;
+    }
+
+    public void GGz(){
+        life -= 3;
+        if (life < 0)
+            life = 0;
+        lifeUI.text = "LIFE: " + life;
+        swapToEnd(3);
+    }
+
+//
+
     void Update()
     {
 #if !UNITY_WEBGL
@@ -96,5 +111,10 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Victory");
         }
         }
+    }
+    IEnumerator swapToEnd (int seconds) {
+        int counter = seconds;
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("Death Screen");
     }
 }
