@@ -26,7 +26,6 @@ public class Banana : MonoBehaviour
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            _gameManager.AddScore();
         }
     }
 }
