@@ -14,4 +14,10 @@ public class Banana1 : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _rigidbody2D.AddForce(new Vector2(-speed, 0));
     }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("Boundary")){
+            Destroy(gameObject);
+        }
+    }
 }

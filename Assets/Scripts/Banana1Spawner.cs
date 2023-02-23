@@ -11,7 +11,7 @@ public class Banana1Spawner : MonoBehaviour
         for (int i = 0; i < 2000; i++) {
             Vector2 spawnPos = new Vector2(Random.Range(8.5f, 17f), Random.Range(-10, 10));
             Instantiate(gorillaPrefab, spawnPos, Quaternion.identity);
-            yield return new WaitForSeconds(.10f);
+            yield return new WaitForSeconds(.2f);
         }
     }
 }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7274948354167346418}
   - component: {fileID: 7274948354167346419}
   - component: {fileID: 7274948354167346417}
-  - component: {fileID: 7274948354167346416}
   - component: {fileID: 7291041950116674492}
   m_Layer: 0
   m_Name: Enemy1
@@ -175,19 +174,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 3004351921275955319, guid: 38add9921ebec4b488e57cc55ad3c789, type: 3}
   goanSound: {fileID: 8300000, guid: 1a627952f8c1c49fda894d9ebc885c34, type: 3}
---- !u!114 &7274948354167346416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7274948354167346422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e548dc37ae88144c49e292e13cb7ad32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeTime: 20
 --- !u!82 &7291041950116674492
 AudioSource:
   m_ObjectHideFlags: 0
@@ -199,7 +185,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
