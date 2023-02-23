@@ -124,13 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   fireRate: 1.75
-<<<<<<< HEAD
   explosion: {fileID: 8943407549544230641, guid: 26e3960467d23f6479f73d10bcbca9b7, type: 3}
   banana: {fileID: 9029767197935886209, guid: 4145c3a2efb4144b580b59b2ce5571cf, type: 3}
-=======
-  explosion: {fileID: 5571962054211812909, guid: 2b8628650a9871546a4dc9dbda73e334, type: 3}
-  banana: {fileID: 8064940716252225615, guid: a3c80f8850fbcdd48b9e1d6898b2264d, type: 3}
->>>>>>> Yanglin
   bulletPrefab: {fileID: 2224382028006212812, guid: b9cb34f4e98826848b4578a9da124c09, type: 3}
   spawnPoint: {fileID: 372916627458057775}
 --- !u!114 &5489093794895390165

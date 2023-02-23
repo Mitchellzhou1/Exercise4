@@ -8,8 +8,8 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     public float rate;
     public int speed;
-    public int requiredPoints;
     public GameObject[] enemies;
+    public GameObject Boss;
 
     GameManager _gameManager;
 
@@ -28,6 +28,7 @@ public class Spawn : MonoBehaviour
         //int count = 0;
 
         // if (enemies[0].CompareTag("NPCBoss") && score)
+<<<<<<< HEAD
         if (_gameManager.getScore() >= requiredPoints){
             keepSpawning = false;    
         }
@@ -37,6 +38,18 @@ public class Spawn : MonoBehaviour
         //     count += 1;
         // }
         if (keepSpawning){
+=======
+        if (_gameManager.getScore() >= 3){
+            activeBoss = true;    
+        }
+
+        if (activeBoss && count == 0){
+            GameObject NPCBoss = Instantiate(Boss, new Vector3(-10, 0, 0), Quaternion.identity);
+            count += 1;
+        }
+        else if (!activeBoss){
+            print("This ran");
+>>>>>>> parent of 75569a2 (fix some merging issues)
             GameObject gorilla = Instantiate(enemies[(int)Random.Range(0, enemies.Length)], new Vector3(Start_Posistion_X, Start_Posistion_Y, 0), Quaternion.identity);
             gorilla.GetComponent<Rigidbody2D>().AddForce(new Vector2(-speed, 0));    
         }
