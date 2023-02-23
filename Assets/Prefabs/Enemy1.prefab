@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5ce7fb0d9d348678942086282c5d47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 4625550279275075921, guid: fc53bad9d5b46409ca65661b1e28e4e6, type: 3}
+  explosion: {fileID: -1434555187960982128, guid: fc53bad9d5b46409ca65661b1e28e4e6, type: 3}
   goanSound: {fileID: 8300000, guid: 1a627952f8c1c49fda894d9ebc885c34, type: 3}
 --- !u!114 &7274948354167346416
 MonoBehaviour:
