@@ -4,11 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Enemy
+  - Bullet
+  - Banana
+  - PlayerBullet
   - enemy
   - NPCBullet
-  - PlayerBullet
-  - Boundary
-  - Banana
   - Health
   - Enemy1
   - Water
