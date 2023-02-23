@@ -5150,6 +5150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 3
   speed: 70
+  requiredPoints: 3
   enemies:
   - {fileID: 1313781272386077264, guid: ecc2fb420a5dcb245a4c6a2ae9258981, type: 3}
 --- !u!61 &754084346
@@ -5285,6 +5286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 15
   speed: 200
+  requiredPoints: 3
   enemies:
   - {fileID: 6863531932664347560, guid: bd539759218e86847b9d5ac78f1c022f, type: 3}
 --- !u!114 &754084353
@@ -5301,6 +5303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 15
   speed: 250
+  requiredPoints: 3
   enemies:
   - {fileID: 232439053847839798, guid: 9953e7a85150345c4a0c4e7881d701a4, type: 3}
 --- !u!114 &754084354
@@ -5317,8 +5320,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 20
   speed: 15
+  requiredPoints: 3
   enemies:
-  - {fileID: 6926819411917938091, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
+  - {fileID: 1774010897743285887, guid: ebfc476ba42c6e549a27bd4d818b2b04, type: 3}
 --- !u!1 &881662679
 GameObject:
   m_ObjectHideFlags: 0
@@ -10430,7 +10434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c7a27d15f669f47a3ce674db62cbd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 3664956007577802533, guid: 0d2e92221a5c6ea44ac8db28bdc7d924, type: 3}
+  explosion: {fileID: 3664956007577802533, guid: cc7a651490403f646840b6fdb410deb6, type: 3}
   bulletPrefab: {fileID: 2224382028006212812, guid: e9c4b0291e0daa14991ff107dc25b471, type: 3}
   spawnPoint: {fileID: 9091822}
 --- !u!50 &1908324525

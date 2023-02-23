@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 952934012249222465}
   - component: {fileID: 1414904776419781727}
   - component: {fileID: 899303172126521619}
+  - component: {fileID: 1998686238854534671}
   m_Layer: 0
   m_Name: NPCBoss
   m_TagString: NPCBoss
@@ -30,7 +31,8 @@ Transform:
   m_LocalPosition: {x: 6.47, y: 0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5112182407556966792}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -214,3 +216,52 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1998686238854534671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774010897743285887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ede15166a5e0a1488a772de4331d491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 40
+  fireRate: 3
+  explosion: {fileID: 3664956007577802533, guid: cc7a651490403f646840b6fdb410deb6, type: 3}
+  bulletPrefab: {fileID: 6926819411917938091, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
+  spawnPoint: {fileID: 5112182407556966792}
+  movespeed: 1
+--- !u!1 &5182368031647823490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5112182407556966792}
+  m_Layer: 0
+  m_Name: spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5112182407556966792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5182368031647823490}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.7, y: -1.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8530213294569945949}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
