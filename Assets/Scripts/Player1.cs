@@ -10,7 +10,7 @@ public class Player1 : MonoBehaviour
     public GameObject waterPrefab;
     public Transform spawnPoint;
     // a banana is 10 points each
-    int pointValue = 10;
+    // int pointValue = 10;
 
     public AudioClip eatSound;
     AudioSource _audioSource;

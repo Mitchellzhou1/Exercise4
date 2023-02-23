@@ -6,9 +6,9 @@ public class Enemy1 : MonoBehaviour
 {
     int speed = 50;
     // taking down a gorilla is 50 points each
-    int pointValue = 50;
+    // int pointValue = 50;
     // beaten by a gorilla is -200 each
-    int harm = -200;
+    // int harm = -200;
 
     Rigidbody2D _rigidbody2D;
     public GameObject explosion;
