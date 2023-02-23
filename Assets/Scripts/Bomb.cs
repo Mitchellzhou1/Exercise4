@@ -14,7 +14,7 @@ public class Bomb : MonoBehaviour
 
     void Start()
     {
-        speed = Random.Range(50,200);
+        speed = Random.Range(50,100);
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _rigidbody2D.AddForce(new Vector2(-speed, 0));
         _gameManager = GameObject.FindObjectOfType<GameManager>();
