@@ -11,8 +11,16 @@ TagManager:
   - enemy
   - NPCBullet
   - Health
+<<<<<<< HEAD
   - Enemy1
   - Water
+=======
+  - Bomb
+  - NPCBoss
+  - Enemy1
+  - BossAttack
+  - Boundary
+>>>>>>> Mitchell
   layers:
   - Default
   - TransparentFX

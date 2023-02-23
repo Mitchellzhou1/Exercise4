@@ -1,18 +1,24 @@
-/* Beach background:
-    https://www.freepik.com/free-vector/empty-nature-beach-ocean-coastal-landscape_5183582.htm#query=beach&position=26&from_view=keyword&track=sph
+// Scenes:
+//     1. ground
+//     2. water
+//     3. space
+
+// player:
+//     Astronaut Monkey
+//         - water gun -> water droplet
+//         - (special move) laser gun
+//         - biting fish
 
 
-
-https://mixkit.co/free-sound-effects/arcade/?page=1
-
-Collecting Banana Sound:
-    Video game mystery alert
-
-https://pixabay.com/sound-effects/search/arcade/
-
-Backgroun Music for Level 3:
+// enemy:
+//     Gorilla
+//         1) stage 1:  gorillas have no guns -> short range attacks 
+//         2) stage 2:  gorillas have weapons -> shoot nets
+//         3) stage 3:  gorillas have banana gun -> shoot lasers
+//             - if we have time add boss
     
 
-
-*/
-
+// features:
+//     - health packs -> heart
+//     - increase bullet dmg -> bomb
+//     - 

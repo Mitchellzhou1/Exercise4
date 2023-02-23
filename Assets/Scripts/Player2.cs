@@ -19,6 +19,7 @@ public class Player2 : MonoBehaviour
     Gun[] guns;
     bool shoot;
 
+
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();

@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5489093794895390165}
   - component: {fileID: 779852655464490421}
   m_Layer: 0
-  m_Name: SpaceGorrilla
-  m_TagString: enemy
+  m_Name: SpaceGorrilla 1
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,8 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   fireRate: 1.75
-  explosion: {fileID: 5571962054211812909, guid: 2b8628650a9871546a4dc9dbda73e334, type: 3}
-  banana: {fileID: 8064940716252225615, guid: a3c80f8850fbcdd48b9e1d6898b2264d, type: 3}
+  explosion: {fileID: 4485302808676867518, guid: ed438c3862049b84db79aca90625bd37, type: 3}
+  banana: {fileID: 9029767197935886209, guid: 4145c3a2efb4144b580b59b2ce5571cf, type: 3}
   bulletPrefab: {fileID: 2224382028006212812, guid: b9cb34f4e98826848b4578a9da124c09, type: 3}
   spawnPoint: {fileID: 372916627458057775}
 --- !u!114 &5489093794895390165
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a1a3a03b4ce0540b7078648c82181f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 13.5
+  lifeTime: 16
 --- !u!60 &779852655464490421
 PolygonCollider2D:
   m_ObjectHideFlags: 0
