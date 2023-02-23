@@ -9,21 +9,20 @@ public class GameManager : MonoBehaviour
     int score = 0;
     int life = 3;
     string levelName;
-
     public TMPro.TextMeshProUGUI scoreUI;
     public TMPro.TextMeshProUGUI lifeUI;
+    
     private void Awake()
-    {   
+    {
         Scene scene = SceneManager.GetActiveScene();
         levelName = scene.name;
-
         if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
         {
             Destroy(gameObject);
         }
         else
         {
-        DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
     }
 
@@ -57,6 +56,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+// Stuff Mitchell Added
+    public int getScore(){
+        return score;
+    }
+
+    public void GGz(){
+        print("THIS FUNCTION RAN");
+        life -= 3;
+        if (life < 0)
+            life = 0;
+        lifeUI.text = "LIFE: " + life;
+        swapToEnd(3);
+    }
+
+//
     void Update()
     {
 #if !UNITY_WEBGL
@@ -69,24 +83,7 @@ public class GameManager : MonoBehaviour
     if (life == 0)
         {
             Destroy(gameObject); 
-            SceneManager.LoadScene("StartGame");
-        }
-
-    if (levelName == "Level 1")
-        {
-        if (score >= 10)
-        {
-            Destroy(gameObject); 
-            SceneManager.LoadScene("Level 2");
-        }
-        }
-    if (levelName == "Level 2")
-        {
-        if (score >= 20)
-        {
-            Destroy(gameObject); 
-            SceneManager.LoadScene("Level 3");
-        }
+            StartCoroutine(swapToEnd(3));
         }
     if (levelName == "Level 3")
         {
@@ -96,5 +93,11 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Victory");
         }
         }
+    }
+
+    IEnumerator swapToEnd (int seconds) {
+        int counter = seconds;
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("Death Screen");
     }
 }
