@@ -88,5 +88,13 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Level 3");
         }
         }
+    if (levelName == "Level 3")
+        {
+        if (score >= 30)
+        {
+            Destroy(gameObject); 
+            SceneManager.LoadScene("Victory");
+        }
+        }
     }
 }
