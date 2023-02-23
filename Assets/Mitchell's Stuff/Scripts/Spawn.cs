@@ -8,8 +8,9 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     public float rate;
     public int speed;
+    public int requiredPoints;
     public GameObject[] enemies;
-    public GameObject Boss;
+    bool flag = true;
 
     GameManager _gameManager;
 
@@ -22,42 +23,27 @@ public class Spawn : MonoBehaviour
     // Update is called once per frame
     void SpawnEnemy()
     {
-        int Start_Posistion_X = 9;
+        int Start_Posistion_X = 12;
         float Start_Posistion_Y = Random.Range(-4.5f, 4.5f);
-        bool keepSpawning = true;
-        //int count = 0;
 
-        // if (enemies[0].CompareTag("NPCBoss") && score)
-<<<<<<< HEAD
         if (_gameManager.getScore() >= requiredPoints){
-            keepSpawning = false;    
+            if (flag && enemies[0].CompareTag("NPCBoss")){
+                GameObject NPCBoss = Instantiate(enemies[0], new Vector3(Start_Posistion_X-3, 0, 0), Quaternion.identity);
+                NPCBoss.GetComponent<Rigidbody2D>().AddForce(new Vector2(-5, -5));
+                print("Created the Boss");
+                flag = false; 
+            }   
         }
-
-        // if (keepSpawning && count == 0){
-        //     GameObject NPCBoss = Instantiate(Boss, new Vector3(-10, 0, 0), Quaternion.identity);
-        //     count += 1;
-        // }
-        if (keepSpawning){
-=======
-        if (_gameManager.getScore() >= 3){
-            activeBoss = true;    
-        }
-
-        if (activeBoss && count == 0){
-            GameObject NPCBoss = Instantiate(Boss, new Vector3(-10, 0, 0), Quaternion.identity);
-            count += 1;
-        }
-        else if (!activeBoss){
-            print("This ran");
->>>>>>> parent of 75569a2 (fix some merging issues)
-            GameObject gorilla = Instantiate(enemies[(int)Random.Range(0, enemies.Length)], new Vector3(Start_Posistion_X, Start_Posistion_Y, 0), Quaternion.identity);
+        else if (!enemies[0].CompareTag("NPCBoss")){
+            GameObject gorilla = Instantiate(enemies[0], new Vector3(Start_Posistion_X, Start_Posistion_Y, 0), Quaternion.identity);
             gorilla.GetComponent<Rigidbody2D>().AddForce(new Vector2(-speed, 0));    
         }
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if (other.CompareTag("NPCBullet") || other.CompareTag("PlayerBullet")){
+        if (!(other.CompareTag("Enemy") || other.CompareTag("NPCBoss")) || other.CompareTag("BossAttack")) {
             Destroy(other.gameObject);
         }
     }
 }
+

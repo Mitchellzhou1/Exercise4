@@ -52,10 +52,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+// Stuff Mitchell Added
     public int getScore(){
         return score;
     }
 
+    public void GGz(){
+        life = 0;
+        swapToEnd(3);
+    }
+
+//
     void Update()
     {
 #if !UNITY_WEBGL

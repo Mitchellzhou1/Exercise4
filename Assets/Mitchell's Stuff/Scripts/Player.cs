@@ -38,25 +38,32 @@ public class Player : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if (other.CompareTag("NPCBullet")){
+        if (other.CompareTag("NPCBullet") || other.CompareTag("enemy")){
             Destroy(other.gameObject);
             _gameManager.MinusLife();
         }
-        else if (other.CompareTag("Banana")){
+        else if (other.CompareTag("Finish")){
+            print("BossAttack");
             Destroy(other.gameObject);
-            // Add points;
+            GameOver();
+            _gameManager.GGz();
+        }
+        else if (other.CompareTag("Banana")){
+            print("Banana");
+            Destroy(other.gameObject);
+            _gameManager.AddScore();
         }
         else if (other.CompareTag("Health")){
+            print("Health");
             Destroy(other.gameObject);
             _gameManager.AddLife();
         }
     }
 
-    // public void GameOver(int score)
-    // {
-    //     Instantiate(explosion, transform.position, Quaternion.identity);
-    //     GameObject.Find("GameManager").GetComponent<GameManager>().isDead = true;
-    //     Destroy(gameObject);
-    // }
+    public void GameOver()
+    {
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
 
 }

@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5489093794895390165}
   - component: {fileID: 779852655464490421}
   m_Layer: 0
-  m_Name: SpaceGorrilla
-  m_TagString: enemy
+  m_Name: SpaceGorrilla 1
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a1a3a03b4ce0540b7078648c82181f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 13.5
+  lifeTime: 16
 --- !u!60 &779852655464490421
 PolygonCollider2D:
   m_ObjectHideFlags: 0

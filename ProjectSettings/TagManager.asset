@@ -13,6 +13,8 @@ TagManager:
   - Health
   - Bomb
   - NPCBoss
+  - Enemy1
+  - BossAttack
   layers:
   - Default
   - TransparentFX

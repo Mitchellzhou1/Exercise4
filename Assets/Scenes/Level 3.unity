@@ -5119,9 +5119,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 3
   speed: 70
+  requiredPoints: 1
   enemies:
-  - {fileID: 1313781272386077264, guid: ecc2fb420a5dcb245a4c6a2ae9258981, type: 3}
-  Boss: {fileID: 1313781272386077264, guid: f9daa204352fb884f826225ca032beba, type: 3}
+  - {fileID: 1313781272386077264, guid: a591142d1c0f0cd4aa978cf447276d0e, type: 3}
 --- !u!61 &754084346
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5187,7 +5187,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 12.77, y: 0.1}
+  m_Offset: {x: 12.59, y: 0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5198,7 +5198,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23, y: 10.44}
+  m_Size: {x: 0.31, y: 10.44}
   m_EdgeRadius: 0
 --- !u!61 &754084349
 BoxCollider2D:
@@ -5213,7 +5213,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -7.46, y: -0.03}
+  m_Offset: {x: -7.6, y: -0.03}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5255,9 +5255,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 15
   speed: 200
+  requiredPoints: 1
   enemies:
   - {fileID: 6863531932664347560, guid: bd539759218e86847b9d5ac78f1c022f, type: 3}
-  Boss: {fileID: 1313781272386077264, guid: f9daa204352fb884f826225ca032beba, type: 3}
 --- !u!114 &754084353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5272,9 +5272,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 15
   speed: 250
+  requiredPoints: 1
   enemies:
   - {fileID: 232439053847839798, guid: 9953e7a85150345c4a0c4e7881d701a4, type: 3}
-  Boss: {fileID: 1313781272386077264, guid: f9daa204352fb884f826225ca032beba, type: 3}
 --- !u!114 &754084354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5282,16 +5282,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754084344}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4d6b5e28336c7444886d0356b4d9513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 1
-  speed: 1
+  rate: 10
+  speed: 10
+  requiredPoints: 1
   enemies:
-  - {fileID: 1313781272386077264, guid: f9daa204352fb884f826225ca032beba, type: 3}
-  Boss: {fileID: 1313781272386077264, guid: f9daa204352fb884f826225ca032beba, type: 3}
+  - {fileID: 833042470503377692, guid: 1f45ac0922ca6ad4ebe8cc9821b6c186, type: 3}
 --- !u!1 &881662679
 GameObject:
   m_ObjectHideFlags: 0
@@ -10933,60 +10933,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &6174671789673692629
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5944752082889617758, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5944752082889617758, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 14.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5944752082889617758, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5944752082889617758, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5944752082889617758, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5944752082889617758, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5944752082889617758, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5944752082889617758, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5944752082889617758, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5944752082889617758, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5944752082889617758, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6926819411917938091, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
-      propertyPath: m_Name
-      value: Boss Attack
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
