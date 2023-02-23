@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 25652897}
   - component: {fileID: 25652896}
+  - component: {fileID: 25652898}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -168,6 +169,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &25652898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25652895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546b7ba506e5448b2832f455afeb6c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gorillaPrefab: {fileID: 4246509637297216338, guid: d9a692605c92645d7b78401ef2737a84, type: 3}
 --- !u!224 &292202960 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7709358247932283525, guid: 9fd18a58e496846489559a049b0dcebb, type: 3}
@@ -359,7 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterPrefab: {fileID: 5837980302186948775, guid: 96b57cece0bdf42e1b224dde5328d2a4, type: 3}
   spawnPoint: {fileID: 1564156793}
-  eatSound: {fileID: 8300000, guid: 62578d084bb2c6445a68deeab323c5de, type: 3}
+  eatSound: {fileID: 8300000, guid: f53ed6ec8a5674c1b96f3866cfbdd839, type: 3}
 --- !u!50 &458079390
 Rigidbody2D:
   serializedVersion: 4
@@ -1234,11 +1248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7709358247932283525, guid: 9fd18a58e496846489559a049b0dcebb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -514
+      value: -486
       objectReference: {fileID: 0}
     - target: {fileID: 7709358247932283525, guid: 9fd18a58e496846489559a049b0dcebb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 128
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 7709358247932283525, guid: 9fd18a58e496846489559a049b0dcebb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
