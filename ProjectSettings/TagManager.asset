@@ -15,6 +15,7 @@ TagManager:
   - NPCBoss
   - Enemy1
   - BossAttack
+  - Boundary
   layers:
   - Default
   - TransparentFX

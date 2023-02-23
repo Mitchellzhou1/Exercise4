@@ -12,15 +12,58 @@ public class NPCBoss : MonoBehaviour
 
 
     public GameObject explosion;
-    public GameObject banana;
     public GameObject bulletPrefab;
     public Transform spawnPoint;
     GameManager _gameManager;
+
+    Transform point1, point2;
+    public float movespeed = 1f;
+    
+    Vector3 localScale;
+    bool moveUp = true;
+    Rigidbody2D rb;
 
     void Start()
     {
         InvokeRepeating("Shoot", fireRate, fireRate);
         _gameManager = GameObject.FindObjectOfType<GameManager>();
+
+
+        localScale = transform.localScale;
+        rb = GetComponent<Rigidbody2D>();
+        point1 = GameObject.Find("point1").GetComponent<Transform>();
+        point2 = GameObject.Find("point2").GetComponent<Transform>();
+
+
+
+    }
+
+    void Update(){
+        if (transform.position.y > point1.position.y){
+            moveUp = false;
+        }
+        if (transform.position.y < point2.position.y){
+            moveUp = true;
+        }
+
+        if (moveUp)
+            moveUp1();
+        else
+            moveDown1();
+    }  
+
+
+    void moveUp1(){      // move up
+        moveUp = true;
+        transform.localScale = localScale;
+        //rb.velocity = new Vector2(localScale.x * movespeed, rb.velocity.y);
+        rb.velocity = new Vector2(rb.velocity.x, localScale.y * movespeed);
+    }
+
+    void moveDown1(){
+        moveUp = false;
+        transform.localScale = localScale;
+        rb.velocity = new Vector2(rb.velocity.x, localScale.y * -movespeed);
     }
 
     void OnTriggerEnter2D(Collider2D other){
@@ -30,7 +73,6 @@ public class NPCBoss : MonoBehaviour
             if (health <= 0){
                 Instantiate(explosion, transform.position, Quaternion.identity);
                 Destroy(gameObject);
-                Instantiate(banana, transform.position, Quaternion.identity);
             }
         }
 

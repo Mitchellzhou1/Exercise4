@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 9126781474155521327}
   - component: {fileID: -3462313999245019757}
   - component: {fileID: 5338473036605116955}
+  - component: {fileID: -475296197609026259}
+  - component: {fileID: 244032870908364083}
   m_Layer: 0
   m_Name: Boss Attack
   m_TagString: Finish
@@ -663,11 +665,11 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 8
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -750,7 +752,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 2
       mode: 0
       spread: 0
       speed:
@@ -3672,7 +3674,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
     type: 0
     collisionMode: 0
@@ -4919,3 +4921,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.7608185, y: 9.049453}
   m_EdgeRadius: 0
+--- !u!114 &-475296197609026259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6926819411917938091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a1a3a03b4ce0540b7078648c82181f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 5
+--- !u!60 &244032870908364083
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6926819411917938091}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -3.8755646, y: 6.8082795}
+      - {x: -6.8143406, y: 2.8610668}
+      - {x: -7.4513435, y: -0.7979919}
+      - {x: -6.18618, y: -4.5087295}
+      - {x: -3.4217033, y: -7.149889}
+      - {x: 4.3940353, y: -7.006364}
+      - {x: 7.43153, y: -0.30170393}
+      - {x: 3.9003534, y: 6.717129}

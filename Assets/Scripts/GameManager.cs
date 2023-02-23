@@ -58,7 +58,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void GGz(){
-        life = 0;
+        print("THIS FUNCTION RAN");
+        life -= 3;
+        if (life < 0)
+            life = 0;
+        lifeUI.text = "LIFE: " + life;
         swapToEnd(3);
     }
 

@@ -28,9 +28,8 @@ public class Spawn : MonoBehaviour
 
         if (_gameManager.getScore() >= requiredPoints){
             if (flag && enemies[0].CompareTag("NPCBoss")){
-                GameObject NPCBoss = Instantiate(enemies[0], new Vector3(Start_Posistion_X-3, 0, 0), Quaternion.identity);
-                NPCBoss.GetComponent<Rigidbody2D>().AddForce(new Vector2(-5, -5));
-                print("Created the Boss");
+                GameObject NPCBoss = Instantiate(enemies[0], new Vector3(Start_Posistion_X-4, 0, 0), Quaternion.identity);
+                //NPCBoss.GetComponent<Rigidbody2D>().AddForce(new Vector2(-5, -speed));
                 flag = false; 
             }   
         }
@@ -41,7 +40,7 @@ public class Spawn : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if (!(other.CompareTag("Enemy") || other.CompareTag("NPCBoss")) || other.CompareTag("BossAttack")) {
+        if (!(other.CompareTag("Enemy") || other.CompareTag("NPCBoss") || other.CompareTag("Finish"))) {
             Destroy(other.gameObject);
         }
     }

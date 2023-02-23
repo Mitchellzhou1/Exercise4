@@ -196,3 +196,4 @@ MonoBehaviour:
   banana: {fileID: 9029767197935886209, guid: 4145c3a2efb4144b580b59b2ce5571cf, type: 3}
   bulletPrefab: {fileID: 6926819411917938091, guid: 33b2b71c55f685041b44c1bb4f4c5407, type: 3}
   spawnPoint: {fileID: 833042470396835096}
+  movespeed: 3

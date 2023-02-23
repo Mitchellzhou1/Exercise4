@@ -43,10 +43,9 @@ public class Player : MonoBehaviour
             _gameManager.MinusLife();
         }
         else if (other.CompareTag("Finish")){
-            print("BossAttack");
-            Destroy(other.gameObject);
-            GameOver();
+            print("You got hit by the BossAttack");
             _gameManager.GGz();
+            GameOver();
         }
         else if (other.CompareTag("Banana")){
             print("Banana");
