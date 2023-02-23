@@ -24,19 +24,19 @@ public class Spawn : MonoBehaviour
     {
         int Start_Posistion_X = 9;
         float Start_Posistion_Y = Random.Range(-4.5f, 4.5f);
-        bool activeBoss = false;
-        int count = 0;
+        bool keepSpawning = true;
+        //int count = 0;
 
         // if (enemies[0].CompareTag("NPCBoss") && score)
         if (_gameManager.getScore() >= requiredPoints){
-            activeBoss = true;    
+            keepSpawning = false;    
         }
 
-        // if (activeBoss && count == 0){
+        // if (keepSpawning && count == 0){
         //     GameObject NPCBoss = Instantiate(Boss, new Vector3(-10, 0, 0), Quaternion.identity);
         //     count += 1;
         // }
-        if (!activeBoss){
+        if (keepSpawning){
             GameObject gorilla = Instantiate(enemies[(int)Random.Range(0, enemies.Length)], new Vector3(Start_Posistion_X, Start_Posistion_Y, 0), Quaternion.identity);
             gorilla.GetComponent<Rigidbody2D>().AddForce(new Vector2(-speed, 0));    
         }
