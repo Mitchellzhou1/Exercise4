@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Bullet
+  - Banana
+  - PlayerBullet
+  - enemy
+  - NPCBullet
+  - Health
+  - Bomb
+  - NPCBoss
+  - Enemy1
+  - BossAttack
+  - Boundary
   layers:
   - Default
   - TransparentFX
@@ -40,4 +52,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 8112771
     locked: 0
