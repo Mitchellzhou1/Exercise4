@@ -12,7 +12,11 @@ GameObject:
   - component: {fileID: 8440675247301186470}
   - component: {fileID: 8504463133244417464}
   - component: {fileID: 5861213919294952046}
+<<<<<<< HEAD
   - component: {fileID: -2463937953145477665}
+=======
+  - component: {fileID: 3433180548812873855}
+>>>>>>> Yanglin
   m_Layer: 0
   m_Name: PlayerBullet
   m_TagString: PlayerBullet
@@ -134,7 +138,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+<<<<<<< HEAD
 --- !u!82 &-2463937953145477665
+=======
+--- !u!82 &3433180548812873855
+>>>>>>> Yanglin
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,9 +152,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
+<<<<<<< HEAD
   m_audioClip: {fileID: 8300000, guid: 8627a5b6f9005304bb4ccf89f4484ff8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.526
+=======
+  m_audioClip: {fileID: 8300000, guid: 7ec55a49f62da2e4dbfb0909f941e5b8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+>>>>>>> Yanglin
   m_Pitch: 1
   Loop: 0
   Mute: 0
