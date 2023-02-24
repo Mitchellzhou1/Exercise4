@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
     if (life == 0)
         {
             Destroy(gameObject); 
-            SceneManager.LoadScene("StartGame");
+            SceneManager.LoadScene("GameOver");
         }
 
     if (levelName == "Level 1")
