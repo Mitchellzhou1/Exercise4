@@ -668,6 +668,56 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2070522183}
     m_Modifications:
+    - target: {fileID: 6953536217590172344, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217590172344, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 225
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217590172345, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_text
+      value: About this game
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217590172345, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6953536217590172345, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217590172345, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217851204410, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217851204410, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 89
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217851204411, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_text
+      value: "David is a young, naughty monkey who enjoys bananas very much. However,
+        he realizes that the only way he could get more bananas is to enter the gorilla's
+        territory. \n\nBeware of the gorillas, they are furious! Don't get into trouble..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217851204411, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6953536217851204411, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_fontStyle
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217851204411, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
     - target: {fileID: 6953536218065071576, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

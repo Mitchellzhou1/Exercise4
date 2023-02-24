@@ -6,23 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Victory.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/StartGame.unity
+    guid: 8a2073fa7614842f29bb6959877d0d57
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 29b3138d88df4401c852606e3a11b95e
-  - enabled: 1
-    path: Assets/Scenes/StartGame.unity
-    guid: 8a2073fa7614842f29bb6959877d0d57
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/Level 1 Conflict.unity
-    guid: 0b1097d4a075d45b489de61888a10c79
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: c323c6e53f2e54fcda804140a346d67e
@@ -32,4 +20,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: c472e7d0793d04aff8d3720223ceb5df
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

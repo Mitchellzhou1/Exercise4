@@ -50,7 +50,7 @@ public class Player1 : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if (other.CompareTag("NPCBullet") || other.CompareTag("enemy")){
+        if (other.CompareTag("enemy")){
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(other.gameObject);
             _gameManager.MinusLife();
