@@ -5181,7 +5181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 3
   speed: 70
-  requiredPoints: 3
+  requiredPoints: 10
   enemies:
   - {fileID: 1313781272386077264, guid: ecc2fb420a5dcb245a4c6a2ae9258981, type: 3}
 --- !u!61 &754084346

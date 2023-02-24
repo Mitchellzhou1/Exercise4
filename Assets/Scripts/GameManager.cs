@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public TMPro.TextMeshProUGUI lifeUI;
 
     private bool defeatedBoss = false;
+    private bool GameOver = false;
 
     private void Awake()
     {   
@@ -50,6 +51,11 @@ public class GameManager : MonoBehaviour
         {
             life -= 1;
             lifeUI.text = "LIFE: " + life;
+            print("THIS RAN");
+            if (life == 0){
+                print("GOT HERE");
+                GameOver = true;
+            }
         }
     }
 
@@ -67,13 +73,14 @@ public class GameManager : MonoBehaviour
         return score;
     }
 
-    public void GGz(){
-        life -= 3;
-        if (life < 0)
-            life = 0;
-        lifeUI.text = "LIFE: " + life;
-        swapToEnd(3);
-    }
+    // public void GGz(){
+    //     life -= 3;
+    //     if (life < 0)
+    //         life = 0;
+    //     lifeUI.text = "LIFE: " + life;
+    //     print("This ran");
+    //     GameOver = true;
+    // }
 
     public void beatGame(){
         defeatedBoss = true;
@@ -117,10 +124,13 @@ public class GameManager : MonoBehaviour
     void Update(){
         if (levelName == "Level 3" && defeatedBoss)
         {
-            // Destroy(gameObject); 
-            print("This ran");
             StartCoroutine(swapToEnd(6));
             defeatedBoss = false;
+        }
+        if (levelName == "Level 3" && GameOver){
+            print("DID THIS RUN");
+            StartCoroutine(swapToLost(6));
+            GameOver = false;
         }
         screenChecker();
     }
@@ -129,5 +139,10 @@ public class GameManager : MonoBehaviour
         int counter = seconds;
         yield return new WaitForSeconds(seconds);
         SceneManager.LoadScene("Victory");
+    }
+    IEnumerator swapToLost (int seconds) {
+        int counter = seconds;
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("GameOver");
     }
 }
