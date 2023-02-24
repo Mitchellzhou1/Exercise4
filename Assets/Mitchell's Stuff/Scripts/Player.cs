@@ -43,13 +43,18 @@ public class Player : MonoBehaviour
         if (other.CompareTag("NPCBullet") || other.CompareTag("enemy")){
             Destroy(other.gameObject);
             _gameManager.MinusLife();
+            if (_gameManager.getLife() == 0){
+                GameOver();
+            }
         }
         else if (other.CompareTag("BossAttack")){
             //print("You got hit by the BossAttack");
             _gameManager.MinusLife();
             _gameManager.MinusLife();
             _gameManager.MinusLife();
-            //GameOver();
+            if (_gameManager.getLife() == 0){
+                GameOver();
+            }
         }
         else if (other.CompareTag("Banana")){
             Destroy(other.gameObject);

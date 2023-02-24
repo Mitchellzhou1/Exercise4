@@ -71,14 +71,9 @@ public class GameManager : MonoBehaviour
         return score;
     }
 
-    // public void GGz(){
-    //     life -= 3;
-    //     if (life < 0)
-    //         life = 0;
-    //     lifeUI.text = "LIFE: " + life;
-    //     print("This ran");
-    //     GameOver = true;
-    // }
+    public int getLife(){
+        return life;
+    }
 
     public void beatGame(){
         defeatedBoss = true;
@@ -94,12 +89,6 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
 #endif
-
-    if (life == 0)
-        {
-            Destroy(gameObject); 
-            SceneManager.LoadScene("GameOver");
-        }
 
     if (levelName == "Level 1")
         {
@@ -125,9 +114,8 @@ public class GameManager : MonoBehaviour
             StartCoroutine(swapToEnd(6));
             defeatedBoss = false;
         }
-        if (levelName == "Level 3" && GameOver){
-            print("DID THIS RUN");
-            StartCoroutine(swapToEnd(6));
+        if (GameOver){
+            StartCoroutine(swapToLost(6));
             GameOver = false;
         }
         screenChecker();
@@ -139,6 +127,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Victory");
     }
     IEnumerator swapToLost (int seconds) {
+        print("THIS ONE RAN!!");
         int counter = seconds;
         yield return new WaitForSeconds(seconds);
         SceneManager.LoadScene("GameOver");

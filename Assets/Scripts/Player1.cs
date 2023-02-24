@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Player1 : MonoBehaviour
 {
 
-    public static Player instance;
+    public static Player1 instance;
     public GameObject explosion;
     int speed = 10;
     int bulletSpeed = 600;
@@ -43,13 +43,18 @@ public class Player1 : MonoBehaviour
         if (other.CompareTag("NPCBullet") || other.CompareTag("enemy")){
             Destroy(other.gameObject);
             _gameManager.MinusLife();
+            if (_gameManager.getLife() == 0){
+                GameOver();
+            }
         }
         else if (other.CompareTag("BossAttack")){
             //print("You got hit by the BossAttack");
             _gameManager.MinusLife();
             _gameManager.MinusLife();
             _gameManager.MinusLife();
-            //GameOver();
+            if (_gameManager.getLife() == 0){
+                GameOver();
+            }
         }
         else if (other.CompareTag("Banana")){
             Destroy(other.gameObject);
@@ -63,8 +68,14 @@ public class Player1 : MonoBehaviour
             Destroy(other.gameObject);
             InvokeRepeating("Shoot", 0, 0.1f);
             StartCoroutine("StopShoot");
-            
         }
+        // if (other.CompareTag("Enemy"))
+        // {
+        //     Instantiate(explosion, transform.position, Quaternion.identity);
+        //     _audioSource.PlayOneShot(hitSnd);
+        //     _gameManager.MinusLife();
+        // }
+
     }
 
     void Shoot()
