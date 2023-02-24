@@ -50,9 +50,10 @@ public class Player2 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("enemy"))
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(other.gameObject);
             _audioSource.PlayOneShot(hitSnd);
             _gameManager.MinusLife();
         }
