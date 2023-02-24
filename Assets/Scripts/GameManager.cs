@@ -115,6 +115,6 @@ public class GameManager : MonoBehaviour
     IEnumerator swapToEnd (int seconds) {
         int counter = seconds;
         yield return new WaitForSeconds(seconds);
-        SceneManager.LoadScene("Death Screen");
+        SceneManager.LoadScene("GameOver");
     }
 }
