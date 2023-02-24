@@ -68,7 +68,6 @@ public class GameManager : MonoBehaviour
         if (life < 0)
             life = 0;
         lifeUI.text = "LIFE: " + life;
-        // swapToEnd(3);
     }
 
 //
@@ -112,10 +111,5 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Victory");
         }
         }
-    }
-    IEnumerator swapScene (int seconds, string sceneName) {
-        int counter = seconds;
-        yield return new WaitForSeconds(seconds);
-        SceneManager.LoadScene(sceneName);
     }
 }
