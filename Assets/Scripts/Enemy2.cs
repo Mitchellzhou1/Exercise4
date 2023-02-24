@@ -53,6 +53,11 @@ public class Enemy2 : MonoBehaviour
             Destroy(gameObject);
             }
         }
+
+        if(other.CompareTag("Boundary")){
+            Destroy(gameObject);
+        }
+
     }
 
 }
