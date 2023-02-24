@@ -41,7 +41,7 @@ public class Transition : MonoBehaviour
             Color color=transition.color;
             color.a=alpha;
             transition.color=color;
-            if(timer>0.95)
+            if(timer>2)
             {
                 loading =false;
                 timer=0;
@@ -54,7 +54,7 @@ public class Transition : MonoBehaviour
             Color color=transition.color;
             color.a=alpha;
             transition.color=color;
-            if(timer>0.95)
+            if(timer>2)
             {
                 unloading =false;
 
