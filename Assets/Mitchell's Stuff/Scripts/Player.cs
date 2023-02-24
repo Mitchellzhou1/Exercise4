@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     int bulletSpeed = 600;
     public GameObject bulletPrefab;
     public Transform spawnPoint;
+    public Transform spawnPointL;
+    public Transform spawnPointR;
 
     GameManager _gameManager;
 
@@ -71,12 +73,11 @@ public class Player : MonoBehaviour
     void Shoot()
     {
 
-        _audioSource.PlayOneShot(shootSnd);
         GameObject rBullet = Instantiate(bulletPrefab, spawnPointR.position, Quaternion.identity);
-        rBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(5, 0));
+        rBullet.GetComponent<Rigidbody2D>().AddForce(new Vector3(bulletSpeed, 0, 1));
 
         GameObject lBullet = Instantiate(bulletPrefab, spawnPointL.position, Quaternion.identity);
-        lBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(5, 0));
+        lBullet.GetComponent<Rigidbody2D>().AddForce(new Vector3(bulletSpeed, 0, 1));
         Destroy(rBullet, 8);
         Destroy(lBullet, 8);
     }
