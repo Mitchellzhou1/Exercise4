@@ -9,13 +9,13 @@ public class Player2 : MonoBehaviour
     public AudioClip hitSnd;
     public AudioClip bananaSnd;
     public AudioClip powerUpSnd;
-    public GameObject explosion;
     public GameObject bulletPrefab;
     public Transform spawnPointL;
     public Transform spawnPointR;
     Rigidbody2D _rigidbody2D;
     AudioSource _audioSource;
     GameManager _gameManager;
+    public GameObject explosion;
     Gun[] guns;
     bool shoot;
 
@@ -50,12 +50,15 @@ public class Player2 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.CompareTag("enemy"))
+        if (other.CompareTag("enemy") || other.CompareTag("Enemy"))
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(other.gameObject);
             _audioSource.PlayOneShot(hitSnd);
             _gameManager.MinusLife();
+            if (_gameManager.getLife() == 0){
+                GameOver();
+            }
         }
 
         if (other.CompareTag("Banana"))
@@ -95,5 +98,12 @@ public class Player2 : MonoBehaviour
     IEnumerator StopShoot(){
         yield return new WaitForSeconds(2);
         CancelInvoke();
+    }
+
+    
+    public void GameOver()
+    {
+        Instantiate(explosion, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 } 
