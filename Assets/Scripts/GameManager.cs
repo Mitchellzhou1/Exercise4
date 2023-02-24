@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
+using System;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -13,12 +14,13 @@ public class GameManager : MonoBehaviour
     public TMPro.TextMeshProUGUI scoreUI;
     public TMPro.TextMeshProUGUI lifeUI;
 
-    // private bool defeatedBoss = false;
+    private bool defeatedBoss = false;
 
     private void Awake()
     {   
         Scene scene = SceneManager.GetActiveScene();
         levelName = scene.name;
+        DontDestroyOnLoad(this);
 
         if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
         {
@@ -73,13 +75,13 @@ public class GameManager : MonoBehaviour
         swapToEnd(3);
     }
 
-    // public void beatGame(){
-    //     defeatedBoss = true;
-    // }
+    public void beatGame(){
+        defeatedBoss = true;
+    }
 
 //
 
-    void Update()
+    void screenChecker()
     {
 #if !UNITY_WEBGL
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -110,18 +112,22 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Level 3");
         }
         }
-    // if (levelName == "Level 3")
-    //     {
-    //     if (defeatedBoss)
-    //     {
-    //         Destroy(gameObject); 
-    //         SceneManager.LoadScene("Victory");
-    //     }
-    //     }
     }
+
+    void Update(){
+        if (levelName == "Level 3" && defeatedBoss)
+        {
+            // Destroy(gameObject); 
+            print("This ran");
+            StartCoroutine(swapToEnd(6));
+            defeatedBoss = false;
+        }
+        screenChecker();
+    }
+
     IEnumerator swapToEnd (int seconds) {
         int counter = seconds;
         yield return new WaitForSeconds(seconds);
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("Victory");
     }
 }

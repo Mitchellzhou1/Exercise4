@@ -74,7 +74,8 @@ public class NPCBoss : MonoBehaviour
             if (health <= 0){
                 Instantiate(explosion, transform.position, Quaternion.identity);
                 Destroy(gameObject);
-                SceneManager.LoadScene("Victory");
+                _gameManager.beatGame();
+                // SceneManager.LoadScene("Victory");
             }
         }
 
