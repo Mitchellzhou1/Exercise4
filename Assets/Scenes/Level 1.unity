@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 20
   speed: 15
-  requiredPoints: 100
+  requiredPoints: 3
   enemies:
   - {fileID: 1774010897743285887, guid: ebfc476ba42c6e549a27bd4d818b2b04, type: 3}
 --- !u!114 &1093088154
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 10
   speed: 250
-  requiredPoints: 100
+  requiredPoints: 3
   enemies:
   - {fileID: 232439053847839798, guid: 9953e7a85150345c4a0c4e7881d701a4, type: 3}
 --- !u!114 &1093088155
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 10
   speed: 200
-  requiredPoints: 100
+  requiredPoints: 3
   enemies:
   - {fileID: 9202531424717480752, guid: ee7b99029026a4428b7b39589a6faa09, type: 3}
 --- !u!114 &1093088156
@@ -1276,21 +1276,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d6b5e28336c7444886d0356b4d9513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
   rate: 0.8
-=======
-<<<<<<< HEAD
-  rate: 0.1
-=======
-  rate: 0.8
->>>>>>> 8339924401b3aeaac68d368d04da15e6759a5573
->>>>>>> Stashed changes
-=======
-  rate: 1
->>>>>>> parent of 8339924 (fixed bomb bug)
   speed: 250
-  requiredPoints: 100
+  requiredPoints: 3
   enemies:
   - {fileID: 7274948354167346422, guid: f29488e0e97ea8e42a41ccc3dffa4e84, type: 3}
 --- !u!61 &1093088157
