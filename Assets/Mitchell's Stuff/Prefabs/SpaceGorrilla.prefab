@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  fireRate: 1.75
+  fireRate: 1.5
   explosion: {fileID: 3664956007577802533, guid: d81e78ac95d9b4ca0a4e6837fa418159, type: 3}
   banana: {fileID: 9029767197935886209, guid: 4145c3a2efb4144b580b59b2ce5571cf, type: 3}
   bulletPrefab: {fileID: 2224382028006212812, guid: b9cb34f4e98826848b4578a9da124c09, type: 3}

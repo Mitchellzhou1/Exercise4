@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class StartPause : MonoBehaviour
 {
-    void PauseGame ()
+    public void PauseGame ()
     {
         Time.timeScale = 0;
     }
-    void ResumeGame ()
+    public void ResumeGame ()
     {
         Time.timeScale = 1;
     }
