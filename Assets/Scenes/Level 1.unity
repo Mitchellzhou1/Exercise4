@@ -623,8 +623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ccce56158504f489ecac514b97f1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  explosion: {fileID: 3664956007577802533, guid: d81e78ac95d9b4ca0a4e6837fa418159, type: 3}
+  bulletPrefab: {fileID: 5837980302186948775, guid: 96b57cece0bdf42e1b224dde5328d2a4, type: 3}
   spawnPoint: {fileID: 1564156793}
 --- !u!50 &458079390
 Rigidbody2D:
@@ -917,7 +917,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689406996}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 797fd52d2e8fbe345970075fe2106545, type: 3}
   m_Name: 
@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d6b5e28336c7444886d0356b4d9513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 15
+  rate: 10
   speed: 250
   requiredPoints: 3
   enemies:
@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d6b5e28336c7444886d0356b4d9513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 15
+  rate: 10
   speed: 200
   requiredPoints: 3
   enemies:
@@ -1242,7 +1242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rate: 1
-  speed: 200
+  speed: 250
   requiredPoints: 3
   enemies:
   - {fileID: 7274948354167346422, guid: f29488e0e97ea8e42a41ccc3dffa4e84, type: 3}
