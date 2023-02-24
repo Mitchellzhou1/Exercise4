@@ -6,22 +6,14 @@ using UnityEngine.SceneManagement;
 public class Player1 : MonoBehaviour
 {
 
-    public static Player1 instance;
+    public static Player instance;
     public GameObject explosion;
-    public GameObject hit_explosion;
-    public GameObject banana_explosion;
-
     int speed = 10;
     int bulletSpeed = 600;
     public GameObject bulletPrefab;
     public Transform spawnPoint;
     public Transform spawnPointL;
     public Transform spawnPointR;
-
-    public AudioClip shootSnd;
-    public AudioClip bananaSnd;
-    public AudioClip powerUpSnd;
-    AudioSource _audioSource;
 
     GameManager _gameManager;
 
@@ -31,7 +23,6 @@ public class Player1 : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _gameManager = GameObject.FindObjectOfType<GameManager>();
-        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,7 +33,6 @@ public class Player1 : MonoBehaviour
         _rigidbody2D.velocity = new Vector2(xSpeed, ySpeed);
 
         if (Input.GetButtonDown("Jump")){
-            _audioSource.PlayOneShot(shootSnd);
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector3(bulletSpeed, 0, 1));
         }
@@ -50,8 +40,7 @@ public class Player1 : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if (other.CompareTag("enemy")|| other.CompareTag("Enemy")){
-            Instantiate(explosion, transform.position, Quaternion.identity);
+        if (other.CompareTag("NPCBullet") || other.CompareTag("enemy")){
             Destroy(other.gameObject);
             _gameManager.MinusLife();
             if (_gameManager.getLife() == 0){
@@ -68,18 +57,14 @@ public class Player1 : MonoBehaviour
             }
         }
         else if (other.CompareTag("Banana")){
-            _audioSource.PlayOneShot(bananaSnd);
-            Instantiate(banana_explosion, transform.position, Quaternion.identity);
             Destroy(other.gameObject);
             _gameManager.AddScore();
         }
         else if (other.CompareTag("Health")){
-            _audioSource.PlayOneShot(powerUpSnd);
             Destroy(other.gameObject);
             _gameManager.AddLife();
         }
         else if (other.CompareTag("Bomb")){
-            _audioSource.PlayOneShot(powerUpSnd);
             Destroy(other.gameObject);
             InvokeRepeating("Shoot", 0, 0.1f);
             StartCoroutine("StopShoot");
