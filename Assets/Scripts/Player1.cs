@@ -12,6 +12,8 @@ public class Player1 : MonoBehaviour
     int bulletSpeed = 600;
     public GameObject bulletPrefab;
     public Transform spawnPoint;
+    public Transform spawnPointL;
+    public Transform spawnPointR;
 
     GameManager _gameManager;
 
@@ -56,9 +58,27 @@ public class Player1 : MonoBehaviour
             _gameManager.AddLife();
         }
         else if (other.CompareTag("Bomb")){
-            Destroy(other.gameObject);
-            _gameManager.AddLife();
+            InvokeRepeating("Shoot", 0, 0.1f);
+            StartCoroutine("StopShoot");
+            
         }
+    }
+
+    void Shoot()
+    {
+
+        GameObject rBullet = Instantiate(bulletPrefab, spawnPointR.position, Quaternion.identity);
+        rBullet.GetComponent<Rigidbody2D>().AddForce(new Vector3(bulletSpeed, 0, 1));
+
+        GameObject lBullet = Instantiate(bulletPrefab, spawnPointL.position, Quaternion.identity);
+        lBullet.GetComponent<Rigidbody2D>().AddForce(new Vector3(bulletSpeed, 0, 1));
+        Destroy(rBullet, 8);
+        Destroy(lBullet, 8);
+    }
+
+    IEnumerator StopShoot(){
+        yield return new WaitForSeconds(2);
+        CancelInvoke();
     }
 
     public void GameOver()
