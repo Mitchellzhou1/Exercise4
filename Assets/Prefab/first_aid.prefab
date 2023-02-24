@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6226338105435410040}
   - component: {fileID: 2566152282575142675}
   - component: {fileID: 2101909042884066740}
+  - component: {fileID: 3321717994306756075}
   m_Layer: 0
   m_Name: first_aid
   m_TagString: Health
@@ -226,3 +227,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 4485302808676867518, guid: 73ff0f8bf7cd01045838f45231b1934e, type: 3}
+--- !u!114 &3321717994306756075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9202531424717480752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a1a3a03b4ce0540b7078648c82181f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 4

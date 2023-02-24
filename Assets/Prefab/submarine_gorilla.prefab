@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8698576148659992657}
   - component: {fileID: 8698576148659992668}
   - component: {fileID: 7018727462208898180}
+  - component: {fileID: 4038451980024243443}
   m_Layer: 0
   m_Name: submarine_gorilla
   m_TagString: enemy
@@ -409,6 +410,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4038451980024243443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8698576148659992662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e548dc37ae88144c49e292e13cb7ad32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 8
 --- !u!1 &8698576149765887080
 GameObject:
   m_ObjectHideFlags: 0

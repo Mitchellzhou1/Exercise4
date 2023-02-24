@@ -14,6 +14,8 @@ public class Player2 : MonoBehaviour
     public Transform spawnPoint;
     public Transform spawnPointL;
     public Transform spawnPointR;
+    public AudioClip hitSnd;
+    AudioSource _audioSource;
 
     GameManager _gameManager;
 
@@ -23,6 +25,7 @@ public class Player2 : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _gameManager = GameObject.FindObjectOfType<GameManager>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -41,6 +44,7 @@ public class Player2 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.CompareTag("NPCBullet") || other.CompareTag("Enemy") || other.CompareTag("enemy")){
+            _audioSource.PlayOneShot(hitSnd);
             _gameManager.MinusLife();
             if (!other.CompareTag("enemy")){
                 Destroy(other.gameObject);

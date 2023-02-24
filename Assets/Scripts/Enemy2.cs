@@ -36,7 +36,7 @@ public class Enemy2 : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
-            _audioSource.PlayOneShot(hitSnd);
+            //_audioSource.PlayOneShot(hitSnd);
             Destroy(other.gameObject);
             health -= 1;
             if (health <= 0)

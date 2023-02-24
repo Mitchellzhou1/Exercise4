@@ -37,8 +37,8 @@ public class Enemy1 : MonoBehaviour
         //     Destroy(gameObject);
         // }
 
-        if(other.CompareTag("Player")){
-            _audioSource.PlayOneShot(goanSound);
-        }
+        // if(other.CompareTag("Player")){
+        //     _audioSource.PlayOneShot(goanSound);
+        // }
     }
 }
