@@ -40,8 +40,11 @@ public class Player2 : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if (other.CompareTag("NPCBullet") || other.CompareTag("enemy") || other.CompareTag("Enemy")){
+        if (other.CompareTag("NPCBullet") || other.CompareTag("Enemy") || other.CompareTag("enemy")){
             _gameManager.MinusLife();
+            if (!other.CompareTag("enemy")){
+                Destroy(other.gameObject);
+            }
             if (_gameManager.getLife() == 0){
                 GameOver();
             }
