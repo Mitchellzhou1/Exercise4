@@ -21,16 +21,17 @@ public class GameManager : MonoBehaviour
     {   
         Scene scene = SceneManager.GetActiveScene();
         levelName = scene.name;
-        DontDestroyOnLoad(this);
 
-        if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-        DontDestroyOnLoad(gameObject);
-        }
+        // we have game manager on every scene... so we don't need this code.s
+        // if(GameObject.FindObjectsOfType<GameManager>().Length > 1)
+        // {
+        //     //print(GameObject.FindObjectsOfType<GameManager>());
+        //     Destroy(gameObject);
+        // }
+        // else
+        // {
+        // DontDestroyOnLoad(gameObject);
+        // }
     }
 
     void Start()
@@ -127,9 +128,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Victory");
     }
     IEnumerator swapToLost (int seconds) {
-        print("THIS ONE RAN!!");
         int counter = seconds;
         yield return new WaitForSeconds(seconds);
+        score = 0;
+        life = 3;
         SceneManager.LoadScene("GameOver");
     }
 }
