@@ -7,11 +7,11 @@ public class BananaSpawner : MonoBehaviour
     public GameObject banana;
     IEnumerator Start()
     {
-        for (int i = 0; i < 20; i++)
-        {   Vector2 spawnPos = new Vector2(10, Random.Range(-4.5f, 4.5f));
+        for (int i = 0; i < 50; i++)
+        {   
+            Vector2 spawnPos = new Vector2(Random.Range(8.5f, 17f), Random.Range(-5, 5));
             Instantiate(banana, spawnPos, Quaternion.identity);
-            Destroy(gameObject, 8);
-            yield return new WaitForSeconds(8);
+            yield return new WaitForSeconds(3f);
         }
     }
 }
