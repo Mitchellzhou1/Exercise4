@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 15
   speed: 250
-  requiredPoints: 0
+  requiredPoints: 20
   enemies:
   - {fileID: 232439053847839798, guid: 9953e7a85150345c4a0c4e7881d701a4, type: 3}
 --- !u!114 &229749289
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 15
   speed: 200
-  requiredPoints: 0
+  requiredPoints: 20
   enemies:
   - {fileID: 9202531424717480752, guid: ee7b99029026a4428b7b39589a6faa09, type: 3}
 --- !u!114 &229749290
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 3
   speed: 140
-  requiredPoints: 0
+  requiredPoints: 20
   enemies:
   - {fileID: 8698576148659992662, guid: cedaa0e80da134d87ac987b294fe5159, type: 3}
 --- !u!61 &229749291
