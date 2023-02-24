@@ -40,7 +40,7 @@ public class Player1 : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if (other.CompareTag("NPCBullet") || other.CompareTag("enemy")){
+        if (other.CompareTag("NPCBullet") || other.CompareTag("enemy") || other.CompareTag("Enemy")){
             Destroy(other.gameObject);
             _gameManager.MinusLife();
             if (_gameManager.getLife() == 0){

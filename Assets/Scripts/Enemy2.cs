@@ -46,6 +46,13 @@ public class Enemy2 : MonoBehaviour
             Instantiate(banana, transform.position, Quaternion.identity);
             }
         }
+        if (other.CompareTag("Player"))
+        {
+            {
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            }
+        }
     }
 
 }
