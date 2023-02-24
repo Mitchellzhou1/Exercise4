@@ -51,9 +51,7 @@ public class GameManager : MonoBehaviour
         {
             life -= 1;
             lifeUI.text = "LIFE: " + life;
-            print("THIS RAN");
             if (life == 0){
-                print("GOT HERE");
                 GameOver = true;
             }
         }
