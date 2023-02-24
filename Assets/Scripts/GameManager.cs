@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour
         }
         if (levelName == "Level 3" && GameOver){
             print("DID THIS RUN");
-            StartCoroutine(swapToLost(6));
+            StartCoroutine(swapToEnd(6));
             GameOver = false;
         }
         screenChecker();
