@@ -1276,6 +1276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d6b5e28336c7444886d0356b4d9513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   rate: 0.8
 =======
@@ -1285,6 +1286,9 @@ MonoBehaviour:
   rate: 0.8
 >>>>>>> 8339924401b3aeaac68d368d04da15e6759a5573
 >>>>>>> Stashed changes
+=======
+  rate: 1
+>>>>>>> parent of 8339924 (fixed bomb bug)
   speed: 250
   requiredPoints: 100
   enemies:

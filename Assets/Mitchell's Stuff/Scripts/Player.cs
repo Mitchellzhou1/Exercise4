@@ -58,7 +58,6 @@ public class Player : MonoBehaviour
             _gameManager.AddLife();
         }
         else if (other.CompareTag("Bomb")){
-            Destroy(other.gameObject);
             InvokeRepeating("Shoot", 0, 0.1f);
             StartCoroutine("StopShoot");
         }
