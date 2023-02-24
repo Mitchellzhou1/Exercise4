@@ -56,9 +56,34 @@ public class Player : MonoBehaviour
             _gameManager.AddLife();
         }
         else if (other.CompareTag("Bomb")){
-            Destroy(other.gameObject);
-            _gameManager.AddLife();
+            InvokeRepeating("Shoot", 0, 0.1f);
+            StartCoroutine("StopShoot");
         }
+        // if (other.CompareTag("Enemy"))
+        // {
+        //     Instantiate(explosion, transform.position, Quaternion.identity);
+        //     _audioSource.PlayOneShot(hitSnd);
+        //     _gameManager.MinusLife();
+        // }
+
+    }
+
+    void Shoot()
+    {
+
+        _audioSource.PlayOneShot(shootSnd);
+        GameObject rBullet = Instantiate(bulletPrefab, spawnPointR.position, Quaternion.identity);
+        rBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(5, 0));
+
+        GameObject lBullet = Instantiate(bulletPrefab, spawnPointL.position, Quaternion.identity);
+        lBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(5, 0));
+        Destroy(rBullet, 8);
+        Destroy(lBullet, 8);
+    }
+
+    IEnumerator StopShoot(){
+        yield return new WaitForSeconds(2);
+        CancelInvoke();
     }
 
     public void GameOver()
