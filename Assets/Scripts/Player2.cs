@@ -1,96 +1,90 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player2 : MonoBehaviour
 {
+
+    public static Player instance;
+    public GameObject explosion;
     int speed = 10;
-    public AudioClip shootSnd;
-    public AudioClip hitSnd;
-    public AudioClip bananaSnd;
-    public AudioClip powerUpSnd;
+    int bulletSpeed = 600;
     public GameObject bulletPrefab;
+    public Transform spawnPoint;
     public Transform spawnPointL;
     public Transform spawnPointR;
-    Rigidbody2D _rigidbody2D;
-    AudioSource _audioSource;
-    GameManager _gameManager;
-    public GameObject explosion;
-    Gun[] guns;
-    bool shoot;
 
+    GameManager _gameManager;
+
+    Rigidbody2D _rigidbody2D;
+    // Start is called before the first frame update
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _audioSource = GetComponent<AudioSource>();
-        guns = transform.GetComponentsInChildren<Gun>();
         _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
+    // Update is called once per frame
     void Update()
     {
         float xSpeed = Input.GetAxis("Horizontal") * speed;
         float ySpeed = Input.GetAxis("Vertical") * speed;
         _rigidbody2D.velocity = new Vector2(xSpeed, ySpeed);
 
-        shoot = Input.GetButtonDown("Jump");
-
-        if (shoot)
-        {
-            shoot = false;
-            _audioSource.PlayOneShot(shootSnd);
-            foreach (Gun gun in guns)
-            {
-                gun.Shoot();
-            }
+        if (Input.GetButtonDown("Jump")){
+            GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
+            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector3(bulletSpeed, 0, 1));
         }
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-
-        if (other.CompareTag("enemy") || other.CompareTag("Enemy"))
-        {
-            Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(other.gameObject);
-            _audioSource.PlayOneShot(hitSnd);
+    void OnTriggerEnter2D(Collider2D other){
+        if (other.CompareTag("NPCBullet") || other.CompareTag("enemy") || other.CompareTag("Enemy")){
             _gameManager.MinusLife();
             if (_gameManager.getLife() == 0){
                 GameOver();
             }
         }
-
-        if (other.CompareTag("Banana"))
-        {
-            _audioSource.PlayOneShot(bananaSnd);
+        else if (other.CompareTag("BossAttack")){
+            //print("You got hit by the BossAttack");
+            _gameManager.MinusLife();
+            _gameManager.MinusLife();
+            _gameManager.MinusLife();
+            if (_gameManager.getLife() == 0){
+                GameOver();
+            }
+        }
+        else if (other.CompareTag("Banana")){
+            Destroy(other.gameObject);
             _gameManager.AddScore();
         }
-
-        if (other.CompareTag("Health"))
-        {
-            _audioSource.PlayOneShot(powerUpSnd);
+        else if (other.CompareTag("Health")){
+            Destroy(other.gameObject);
             _gameManager.AddLife();
         }
-
-        if (other.CompareTag("Bomb"))
-        {
-            _audioSource.PlayOneShot(powerUpSnd);
+        else if (other.CompareTag("Bomb")){
+            Destroy(other.gameObject);
             InvokeRepeating("Shoot", 0, 0.1f);
             StartCoroutine("StopShoot");
-            
         }
+        // if (other.CompareTag("Enemy"))
+        // {
+        //     Instantiate(explosion, transform.position, Quaternion.identity);
+        //     _audioSource.PlayOneShot(hitSnd);
+        //     _gameManager.MinusLife();
+        // }
+
     }
 
     void Shoot()
     {
 
-        _audioSource.PlayOneShot(shootSnd);
         GameObject rBullet = Instantiate(bulletPrefab, spawnPointR.position, Quaternion.identity);
-        rBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(5, 0));
+        rBullet.GetComponent<Rigidbody2D>().AddForce(new Vector3(bulletSpeed, 0, 1));
 
         GameObject lBullet = Instantiate(bulletPrefab, spawnPointL.position, Quaternion.identity);
-        lBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(5, 0));
+        lBullet.GetComponent<Rigidbody2D>().AddForce(new Vector3(bulletSpeed, 0, 1));
         Destroy(rBullet, 8);
         Destroy(lBullet, 8);
     }
@@ -100,10 +94,10 @@ public class Player2 : MonoBehaviour
         CancelInvoke();
     }
 
-    
     public void GameOver()
     {
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
-} 
+
+}
