@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public TMPro.TextMeshProUGUI scoreUI;
     public TMPro.TextMeshProUGUI lifeUI;
 
-    private bool defeatedBoss = false;
+    // private bool defeatedBoss = false;
 
     private void Awake()
     {   
@@ -73,9 +73,9 @@ public class GameManager : MonoBehaviour
         swapToEnd(3);
     }
 
-    public void beatGame(){
-        defeatedBoss = true;
-    }
+    // public void beatGame(){
+    //     defeatedBoss = true;
+    // }
 
 //
 
@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
     if (life == 0)
         {
             Destroy(gameObject); 
-            SceneManager.LoadScene("StartGame");
+            SceneManager.LoadScene("GameOver");
         }
 
     if (levelName == "Level 1")
@@ -110,14 +110,14 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Level 3");
         }
         }
-    if (levelName == "Level 3")
-        {
-        if (defeatedBoss)
-        {
-            Destroy(gameObject); 
-            SceneManager.LoadScene("Victory");
-        }
-        }
+    // if (levelName == "Level 3")
+    //     {
+    //     if (defeatedBoss)
+    //     {
+    //         Destroy(gameObject); 
+    //         SceneManager.LoadScene("Victory");
+    //     }
+    //     }
     }
     IEnumerator swapToEnd (int seconds) {
         int counter = seconds;

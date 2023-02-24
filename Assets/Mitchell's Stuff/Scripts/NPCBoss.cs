@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPCBoss : MonoBehaviour
 {
@@ -73,6 +74,7 @@ public class NPCBoss : MonoBehaviour
             if (health <= 0){
                 Instantiate(explosion, transform.position, Quaternion.identity);
                 Destroy(gameObject);
+                SceneManager.LoadScene("Victory");
             }
         }
 
