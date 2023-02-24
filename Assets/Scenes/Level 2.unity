@@ -353,10 +353,10 @@ MonoBehaviour:
   hitSnd: {fileID: 8300000, guid: 7964040b582de49d8a3c6dcaf38e8bbf, type: 3}
   bananaSnd: {fileID: 8300000, guid: 66f9ff55bcfbf46579f6d6108c8cf924, type: 3}
   powerUpSnd: {fileID: 8300000, guid: 66f9ff55bcfbf46579f6d6108c8cf924, type: 3}
-  explosion: {fileID: 4485302808676867518, guid: 1a9ad4f53ce1643c8a2d03f3e94580fa, type: 3}
   bulletPrefab: {fileID: 5043112539386712662, guid: 43f38b88ea9de41f8b48321a7386b446, type: 3}
   spawnPointL: {fileID: 1557535370}
   spawnPointR: {fileID: 762486470}
+  explosion: {fileID: 4485302808676867518, guid: 1a9ad4f53ce1643c8a2d03f3e94580fa, type: 3}
 --- !u!60 &261869935
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5891,6 +5891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transition
       objectReference: {fileID: 0}
+    - target: {fileID: 3299893546125785867, guid: adc6f4db477f3734fb9f06921e832fb4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc6f4db477f3734fb9f06921e832fb4, type: 3}
 --- !u!1 &1557535369
@@ -6249,6 +6253,96 @@ PrefabInstance:
     - target: {fileID: 4000304596927652759, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
       propertyPath: m_Name
       value: Score Board Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288340770396, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6339946288340770396, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288340770396, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6339946288776725324, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288776725324, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288776725327, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288998956462, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288998956463, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_text
+      value: '-1 life when captured by the net or collided with gorilla
+
+        +1
+        score if the gorilla gets killed by biting fish and collects the banana
+
+        +1
+        life if life packet collected
+
+        Power up when bombs collected
+
+        Score
+        >= 20 to move to the next level
+
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288998956463, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6339946288998956463, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288998956463, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6339946289241105452, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 257
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946289241105453, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_text
+      value: Rules
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946289241105453, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontSize
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946289241105453, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6339946289241105453, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontStyle
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946289241105453, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946289241105453, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 9077335926659003675, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}

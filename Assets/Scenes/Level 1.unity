@@ -540,6 +540,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transition
       objectReference: {fileID: 0}
+    - target: {fileID: 3299893546125785867, guid: adc6f4db477f3734fb9f06921e832fb4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299893546125785867, guid: adc6f4db477f3734fb9f06921e832fb4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc6f4db477f3734fb9f06921e832fb4, type: 3}
 --- !u!114 &448852544 stripped
@@ -1756,6 +1764,167 @@ PrefabInstance:
     - target: {fileID: 4000304596927652759, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
       propertyPath: m_Name
       value: Score Board Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000304596927652759, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000304598513434129, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000304598514050859, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288604745415, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288604745415, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288604745415, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288604745415, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.5235849
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288604745415, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.5235849
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288604745415, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288776725324, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288776725324, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288776725325, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288776725327, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_Name
+      value: window widget
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288776725327, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288998956462, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 81
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288998956463, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_text
+      value: 'Now, help David esacpe the Gorillas on their grassland
+
+        -1
+        life when collide with the Gorilla
+
+        +1 score if the gorilla gets
+        killed by the water gun and collects the banana
+
+        +1 life if life
+        packet collected
+
+        Power up when bombs collected
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288998956463, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6339946288998956463, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946288998956463, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6339946289241105452, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 253
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946289241105453, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_text
+      value: Rules
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946289241105453, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontSize
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946289241105453, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6339946289241105453, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontStyle
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946289241105453, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946289241105453, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6339946289479952058, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339946289479952059, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 9077335926395020672, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9077335926395020672, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9077335926395020672, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9077335926395020672, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9077335926395020672, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9077335926395020672, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9077335926395020673, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -805
+      objectReference: {fileID: 0}
+    - target: {fileID: 9077335926395020673, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 161
+      objectReference: {fileID: 0}
+    - target: {fileID: 9077335926659003675, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e3242bbacd70433fb28e5ec4215202e, type: 3}

@@ -700,6 +700,52 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2070522183}
     m_Modifications:
+    - target: {fileID: 6953536217590172344, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -444
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217590172344, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 228
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217590172345, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_text
+      value: About this game
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217590172345, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6953536217590172345, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217590172345, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6953536217851204410, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217851204411, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_text
+      value: "David is a young, naughty monkey who enjoys bananas very much. However,
+        he realizes that the only way he could get more bananas is to enter the gorilla's
+        territory. \n\nBeware of the gorillas, they are furious! Don't get into trouble..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217851204411, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6953536217851204411, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536217851204411, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
     - target: {fileID: 6953536218065071576, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -766,7 +812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6953536218065071576, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0034428
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6953536218065071576, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -792,6 +838,42 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6953536218497065043, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536218497065043, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536218497065043, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536218497065043, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.5235849
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536218497065043, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.5235849
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536218497065043, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536218769961160, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 6953536218769961160, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953536218769961160, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d12f7e6e226d94e95bd05fdaa4c579ce, type: 3}
 --- !u!1001 &1396988492
@@ -1508,6 +1590,10 @@ PrefabInstance:
     - target: {fileID: 3299893546125785867, guid: adc6f4db477f3734fb9f06921e832fb4, type: 3}
       propertyPath: m_Name
       value: Transition
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299893546125785867, guid: adc6f4db477f3734fb9f06921e832fb4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc6f4db477f3734fb9f06921e832fb4, type: 3}
