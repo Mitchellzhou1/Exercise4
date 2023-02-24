@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         lifeUI.text = "LIFE: " + life;
     }
 
+
     public void AddScore()
     {
         score += 1;
@@ -67,7 +68,7 @@ public class GameManager : MonoBehaviour
         if (life < 0)
             life = 0;
         lifeUI.text = "LIFE: " + life;
-        swapToEnd(3);
+        // swapToEnd(3);
     }
 
 //
@@ -112,9 +113,9 @@ public class GameManager : MonoBehaviour
         }
         }
     }
-    IEnumerator swapToEnd (int seconds) {
+    IEnumerator swapScene (int seconds, string sceneName) {
         int counter = seconds;
         yield return new WaitForSeconds(seconds);
-        SceneManager.LoadScene("Death Screen");
+        SceneManager.LoadScene(sceneName);
     }
 }

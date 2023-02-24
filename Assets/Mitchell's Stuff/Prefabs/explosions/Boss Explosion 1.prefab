@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3664956007577802533}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.360001, y: -1.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -43,7 +43,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3664956007577802533}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 6
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -118,7 +118,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 4
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -171,7 +171,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -979,7 +979,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 50
+        scalar: 100
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1373,8 +1373,8 @@ ParticleSystem:
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
-        ctime1: 42791
+        ctime0: 26021
+        ctime1: 63800
         ctime2: 65535
         ctime3: 65535
         ctime4: 0
@@ -4884,7 +4884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a1a3a03b4ce0540b7078648c82181f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 2
+  lifeTime: 5
 --- !u!82 &792861375230328871
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4895,7 +4895,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 30a8203ce1a34c54da8cb59a53adb1db, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e461f5ff32722904e99e0c33ed783bae, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

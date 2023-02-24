@@ -48,12 +48,14 @@ public class Player : MonoBehaviour
             GameOver();
         }
         else if (other.CompareTag("Banana")){
-            print("Banana");
             Destroy(other.gameObject);
             _gameManager.AddScore();
         }
         else if (other.CompareTag("Health")){
-            print("Health");
+            Destroy(other.gameObject);
+            _gameManager.AddLife();
+        }
+        else if (other.CompareTag("Bomb")){
             Destroy(other.gameObject);
             _gameManager.AddLife();
         }
