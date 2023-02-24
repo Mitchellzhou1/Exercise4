@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     public TMPro.TextMeshProUGUI scoreUI;
     public TMPro.TextMeshProUGUI lifeUI;
+
+    private bool defeatedBoss = false;
+
     private void Awake()
     {   
         Scene scene = SceneManager.GetActiveScene();
@@ -70,6 +73,10 @@ public class GameManager : MonoBehaviour
         swapToEnd(3);
     }
 
+    public void beatGame(){
+        defeatedBoss = true;
+    }
+
 //
 
     void Update()
@@ -105,7 +112,7 @@ public class GameManager : MonoBehaviour
         }
     if (levelName == "Level 3")
         {
-        if (score >= 30)
+        if (defeatedBoss)
         {
             Destroy(gameObject); 
             SceneManager.LoadScene("Victory");

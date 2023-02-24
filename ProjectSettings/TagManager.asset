@@ -16,6 +16,8 @@ TagManager:
   - NPCBoss
   - Bomb
   - Transition
+  - Boundary
+  - BossAttack
   layers:
   - Default
   - TransparentFX
