@@ -40,7 +40,8 @@ public class Spawn : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if (!(other.CompareTag("enemy") || other.CompareTag("NPCBoss") || other.CompareTag("Finish"))) {
+        if (!(other.CompareTag("enemy") || other.CompareTag("NPCBoss") || other.CompareTag("BossAttack") 
+            || other.CompareTag("Bomb") || other.CompareTag("Health"))) {
             Destroy(other.gameObject);
         }
     }
